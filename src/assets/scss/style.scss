@@ -1,0 +1,130 @@
+@import './global';
+.v-header {
+    padding: 20px 0;
+    &__block {
+        width: auto;
+        position: relative;
+        &-search {
+            width: 100%;
+            height: 50px;
+            padding: 10px 10px 10px 40px;
+            font-size: 1em;
+            border-radius: 20px;
+            background-color: #EDEDED;
+            border: none;
+            font-weight: 600;
+        }
+        &-btn {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: 10px;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.v-add-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(#FFC000, #FFC000);
+    box-shadow: 0 0 15px 0 #F6DC83;
+    cursor: pointer;
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 3px;
+        width: 40%;
+        height: 3px;
+    }
+    &::after {
+        transform: rotate(90deg);
+    }
+}
+
+.v-create-task,
+.v-view-task {
+    &__header {
+        padding: 20px 0;
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-btn {
+                width: 25px;
+                height: 25px;
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+            }
+        }
+    }
+    &__main {
+        &-header-block-date {
+            color: #AAAAAA;
+            @extend %roboto-300;
+        }
+        &-name {
+            width: 100%;
+            min-height: 100vh;
+            border: none;
+            background-color: #fff;
+            border: 1px solid #c1c1c1;
+            border-radius: 3px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.v-tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__nothing {
+        text-align: center;
+        @extend %roboto-900;
+    }
+}
+
+.v-task {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px 40px 20px 20px;
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    a {
+        color: #000;
+    }
+    &__remove {
+        width: 16px;
+        height: 16px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+}
